@@ -1,0 +1,140 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: black;
+  padding-top: 80px; /* Adjust for fixed header height */
+  overflow-x: hidden;
+}
+
+nav {
+  margin-top: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: transparent;
+  opacity: 0.9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 32px;
+  font-family: elephant;
+  cursor: pointer;
+}
+
+.logo-img {
+  width: 50px;
+  height: 50px;
+}
+
+.logo a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-links {
+  display: flex;
+  width: 50vw;
+  justify-content: end;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links li a {
+  margin: 0 20px;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+
+#signin-btn, #register-btn {
+  width: 60px;
+  height: 27px;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+#register-btn {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.toggler {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.toggler div {
+  background-color: white;
+  width: 30px;
+  height: 4px;
+  margin: 4px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 10px;
+      background-color: #0a1526;
+      width: 200px;
+      border-radius: 8px;
+      padding: 10px;
+      z-index: 2;
+  }
+
+  .nav-links.active {
+      display: flex;
+  }
+
+  .nav-links li {
+      margin: 10px 0;
+      text-align: center;
+  }
+
+  .toggler {
+      display: flex;
+      margin-left: auto;
+  }
+}
+
