@@ -26,7 +26,7 @@ html {
 body {
   font-family: "Arial", sans-serif;
   background-color: black;
-  padding-top: 80px; /* Adjust for fixed header height */
+  padding-top: 80px;
   overflow-x: hidden;
 }
 

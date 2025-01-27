@@ -16,7 +16,6 @@ const App = () => {
 
     window.addEventListener('scroll', handleScroll);
 
-    // Clean up the event listener when the component unmounts
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -30,7 +29,7 @@ const App = () => {
     <div className="App">
       <nav style={{ backgroundColor: navbarColor }}>
         <div className="logo">
-          <a href="index.html"><img src="/images/fav.png" alt="Logo" className="logo-img" /></a>
+          <a href="index.html"><img src="fav.png" alt="Logo" className="logo-img" /></a>
           <span>GeneticX</span>
         </div>
         <div className={`nav-links-container ${menuActive ? 'active' : ''}`}>
@@ -49,7 +48,6 @@ const App = () => {
           <div></div>
         </div>
       </nav>
-      {/* Your other sections here */}
     </div>
   );
 };
