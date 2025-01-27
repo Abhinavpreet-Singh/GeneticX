@@ -66,7 +66,34 @@ const App = () => {
         </div>
       </section>
 
-      {/* Add more sections here as needed */}
+      <section className="website-container">
+      <h2>Upload Your <p>DNA</p> like a Pro !</h2>
+      <div className="website-info">
+        <div className="sub-section">
+          <img src="images/tick mark.png" alt="" />
+          <p>Genetic Analysis</p>
+          <div className="sub-section-content">
+            <p>Upload your DNA in depth analysis.</p>
+          </div>
+        </div>
+
+        <div className="sub-section">
+          <img src="images/tick mark.png" alt="" />
+          <p>Predict Impacts</p>
+          <div className="sub-section-content">
+            <p>Understood what those mutations mean for you.</p>
+          </div>
+        </div>
+
+        <div className="sub-section">
+          <img src="images/tick mark.png" alt="" />
+          <p>Learn Genetics</p>
+          <div className="sub-section-content">
+            <p>Dive into the wild <br /> world of DNA science.</p>
+          </div>
+        </div>
+      </div>
+    </section>
     </div>
   );
 };
