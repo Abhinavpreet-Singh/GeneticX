@@ -1,26 +1,8 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
+  font-family: "Roboto", serif;
 }
 
 body {
@@ -49,9 +31,13 @@ nav {
 .logo {
   display: flex;
   align-items: center;
-  font-size: 32px;
-  font-family: elephant;
-  cursor: pointer;
+}
+.logo span {
+  font-size: 60px;
+  
+  font-family: "Montez", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .logo-img {
@@ -88,7 +74,6 @@ nav {
   background-color: #fff;
   cursor: pointer;
 }
-
 #register-btn {
   background-color: transparent;
   color: #fff;
@@ -138,3 +123,158 @@ nav {
   }
 }
 
+.main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.main-content {
+  margin-right: 50px;
+  width: 800px;
+  height: 300px;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+  margin-top: -80px;
+}
+
+#background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 108%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.main h1 {
+  padding-bottom: 20px;
+  font-size: 75px;
+  margin-bottom: 20px;
+  text-shadow: 10px 15px 10px black;
+  font-family: "BerkshireSwash-Regular";
+}
+
+.button {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  background: none;
+  color: #0000;
+  cursor: pointer;
+  position: relative;
+  padding: 8px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 17px;
+  transition: all 0.15s ease;
+}
+
+.button::before,
+.button::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  left: 0;
+  height: calc(50% - 5px);
+  border: 1px solid #ffff;
+  transition: all 0.15s ease;
+}
+
+.button::before {
+  top: 0;
+  border-bottom-width: 0;
+}
+
+.button::after {
+  bottom: 0;
+  border-top-width: 0;
+}
+
+.button:active,
+.button:focus {
+  outline: none;
+}
+
+.button:active::before,
+.button:active::after {
+  right: 3px;
+  left: 3px;
+}
+
+.button:active::before {
+  top: 3px;
+}
+
+.button:active::after {
+  bottom: 3px;
+}
+
+.button_lg {
+  position: relative;
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #000;
+  overflow: hidden;
+  box-shadow: inset 0px 0px 0px 1px transparent;
+}
+
+.button_lg::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 2px;
+  background-color: #0f1923;
+}
+
+.button_lg::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 4px;
+  height: 4px;
+  background-color: #0f1923;
+  transition: all 0.5s ease;
+}
+
+.button_sl {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: -1px;
+  left: -8px;
+  width: 0;
+  background-color: #00ddff;
+  color: #000;
+  transform: skew(-15deg);
+  transition: all 0.5s ease;
+}
+
+.button_text {
+  position: relative;
+}
+
+.button:hover {
+  color: #000;
+}
+
+.button:hover .button_text {
+  color: black;
+}
+
+.button:hover .button_sl {
+  width: calc(100% + 15px);
+}
